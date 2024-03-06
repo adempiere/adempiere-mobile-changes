@@ -15,7 +15,7 @@
  * All Rights Reserved.                                                       *
  * Contributor(s): Yamel Senih www.erpya.com                                  *
  *****************************************************************************/
-package org.spin.template.util;
+package org.spin.mobile.util;
 
 /**
  * Add here all changes for core and statci methods
@@ -23,6 +23,10 @@ package org.spin.template.util;
  * @author Yamel Senih, ysenih@erpya.com, ERPCyA http://www.erpya.com
  */
 public class Changes {
-	/**	Colum added to core	*/
-	public static final String COLUMNNAME_ColumAddedToCore = "ColumAddedToCore";
+	/**	Is Mobile Feature	*/
+	public static final String COLUMNNAME_MOBILE_IsMobile = "MOBILE_IsMobile";
+	/**	Form Slug	*/
+	public static final String COLUMNNAME_MOBILE_Slug = "MOBILE_Slug";
+	/**	Image URL	*/
+	public static final String COLUMNNAME_MOBILE_ImageURL = "MOBILE_ImageURL";
 }

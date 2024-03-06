@@ -1,6 +1,14 @@
-# ADempiere Template Project
+# ADempiere Mobile Changes
 
-Fill it with a comment about project.
+A project to make dictionary changes from ADempiere and reuse some entities inside mobile application
+
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
 
 ## Requirements
 - [JDK 11 or later](https://adoptium.net/)
@@ -8,26 +16,55 @@ Fill it with a comment about project.
 
 
 ### Packages Names
-you should change the follows packages for your own implementation, just change the word `template` by your implementation
+The main package name is `org.spin.mobile` by your implementation
 
 ```Java
-org.spin.template.model.validator
-org.spin.template.setup
-org.spin.template.util
+org.spin.mobile.model.validator
+org.spin.mobile.setup
+org.spin.mobile.util
 ```
 
 ### Model Validators
-Change the `org.spin.template.model.validator.Validator` by your implementation, example: `org.spin.template.model.validator.MyOwnFunctionality`
+Change the `org.spin.mobile.model.validator.Validator` by your implementation, example: `org.spin.mobile.model.validator.MyOwnFunctionality`
 
 ### Model Deploy class
-Change the `org.spin.template.setup.Deploy` by your implementation, example: `org.spin.template.setup.MyOwnSetupForDeploy`
+Change the `org.spin.mobile.setup.Deploy` by your implementation, example: `org.spin.mobile.setup.MyOwnSetupForDeploy`
 
 ### Model Util class for core changes
-Change the `org.spin.template.util.Changes` by your implementation, example: `org.spin.template.util.MyOwnChanges`
+Change the `org.spin.mobile.util.Changes` by your implementation, example: `org.spin.mobile.util.MyOwnChanges`
+
+## Core Changes
+
+The main core changes is some elements and columns added to identify mobile entities.
+
+### Entity Type
+
+- Code: `MOBILE`
+- Name: `Spin Contribution (Mobile Support)`
+- Model Package: `org.spin.mobile.model` 
+
+### Elements
+
+- DB Column Name: `MOBILE_IsMobile`
+- Name: `Mobile Feature`
+- Type: `Yes-No`
+
+### Column Changes
+
+- Table: `AD_Form` 
+  - `MOBILE_IsMobile`
+  - `MOBILE_Slug`
+  - `MOBILE_ImageURL`
+  
+- Table: `AD_User`
+  - `MOBILE_IsMobile`
+- Table: `AD_Role`
+  - `MOBILE_IsMobile`
+
 
 ## Binary Project
 
-You can get all binaries from github [here](https://central.sonatype.com/artifact/io.github.adempiere/adempiere-template-project/1.0.0).
+You can get all binaries from github [here](https://central.sonatype.com/artifact/io.github.adempiere/adempiere-mobile-changes/1.0.0).
 
 All contruction is from github actions
 
@@ -44,13 +81,13 @@ Is very easy.
 - Gradle
 
 ```Java
-implementation 'io.github.adempiere:adempiere-template-project:1.0.0'
+implementation 'io.github.adempiere:adempiere-mobile-changes:1.0.0'
 ```
 
 - SBT
 
 ```
-libraryDependencies += "io.github.adempiere" % "adempiere-template-project" % "1.0.0"
+libraryDependencies += "io.github.adempiere" % "adempiere-mobile-changes" % "1.0.0"
 ```
 
 - Apache Maven
@@ -58,7 +95,7 @@ libraryDependencies += "io.github.adempiere" % "adempiere-template-project" % "1
 ```
 <dependency>
     <groupId>io.github.adempiere</groupId>
-    <artifactId>adempiere-template-project</artifactId>
+    <artifactId>adempiere-mobile-changes</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```

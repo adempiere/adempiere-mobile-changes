@@ -51,7 +51,7 @@ version = System.getenv("ADEMPIERE_LIBRARY_VERSION") ?: "local-1.0.0"
 jar {
 	manifest {
 		attributes(
-			"Implementation-Title": "ADempiere Template Management",
+			"Implementation-Title": "ADempiere Mobile Changes",
 			"Implementation-Version": version,
 			"EntityType": entityType
 		)
@@ -73,12 +73,12 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
 			groupId = group
-			artifactId = 'adempiere-template-project'
+			artifactId = 'adempiere-mobile-changes'
 			version = version
            	from components.java
            	pom {
-                name = 'ADempiere Template Project'
-                description = 'Fill it with project description'
+                name = 'ADempiere Mobile Changes'
+                description = 'A project to make dictionary changes from ADempiere and reuse some entities inside mobile application'
                 url = 'http://adempiere.io/'
                 licenses {
                     license {
@@ -94,9 +94,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git://github.com/adempiere/adempiere-template-project.git'
-                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-template-project.git'
-                    url = 'http://github.com/adempiere/adempiere-template-project'
+                    connection = 'scm:git:git://github.com/adempiere/adempiere-mobile-changes.git'
+                    developerConnection = 'scm:git:ssh://github.com/adempiere/adempiere-mobile-changes.git'
+                    url = 'http://github.com/adempiere/adempiere-mobile-changes'
                 }
             }
 		}

@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License                *
  * along with this program.	If not, see <https://www.gnu.org/licenses/>.            *
  ************************************************************************************/
-package org.spin.template.model.validator;
+package org.spin.mobile.model.validator;
 
 import org.adempiere.core.domains.models.I_C_Order;
 import org.adempiere.core.domains.models.I_C_OrderLine;
@@ -23,7 +23,7 @@ import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
 import org.compiere.util.CLogger;
-import org.spin.template.util.Changes;
+import org.spin.mobile.util.Changes;
 
 /**
  * Write here your change comment
@@ -86,7 +86,7 @@ public class Validator implements ModelValidator {
 				MDocType documentType = MDocType.get(entity.getCtx(), order.getC_DocTypeTarget_ID());
 				if(order.isSOTrx()
 						&& !order.isReturnOrder()
-						&& documentType.get_ValueAsBoolean(Changes.COLUMNNAME_ColumAddedToCore)) {
+						&& documentType.get_ValueAsBoolean(Changes.COLUMNNAME_MOBILE_IsMobile)) {
 					
 				}
 			}

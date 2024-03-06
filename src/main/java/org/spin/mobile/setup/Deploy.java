@@ -14,13 +14,13 @@
  * All Rights Reserved.                                                       *
  * Contributor(s): Yamel Senih www.erpya.com                                  *
  *****************************************************************************/
-package org.spin.template.setup;
+package org.spin.mobile.setup;
 
 import java.util.Properties;
 
 import org.compiere.model.Query;
 import org.adempiere.core.domains.models.X_AD_ModelValidator;
-import org.spin.template.model.validator.Validator;
+import org.spin.mobile.model.validator.Validator;
 import org.spin.util.ISetupDefinition;
 
 /**
